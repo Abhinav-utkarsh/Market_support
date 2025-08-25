@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Hub - Av_eSAFE Market</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">Av_eSAFE Market</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="calculators.html" class="nav-link">Calculators</a></li>
+                <li class="nav-item"><a href="learning.html" class="nav-link active">Learning Hub</a></li>
+                <li class="nav-item"><a href="extra-features.html" class="nav-link">Extra Tools</a></li>
+            </ul>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content page-title">
+        <h1>Learning Hub</h1>
+        <p>Empower yourself with financial knowledge.</p>
+
+        <section class="learning-section">
+            <h2>Featured Articles</h2>
+            <div class="articles-grid">
+                <div class="article-card">
+                    <h3>Basics of Trading</h3>
+                    <p>Learn the fundamental concepts of trading in the stock market, from order types to market hours.</p>
+                </div>
+                <div class="article-card">
+                    <h3>SIP vs Lumpsum</h3>
+                    <p>Discover the differences between Systematic Investment Plans and Lumpsum investments and find out which is right for you.</p>
+                </div>
+                <div class="article-card">
+                    <h3>The Power of Long-term Investing</h3>
+                    <p>Understand how compounding and patience can lead to significant wealth creation over time.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="learning-section">
+            <h2>What Kind of Investor Are You?</h2>
+            <div class="quiz-widget">
+                <p>When the market drops, you:</p>
+                <form id="investor-quiz">
+                    <label><input type="radio" name="investor-type" value="aggressive"> See a buying opportunity.</label>
+                    <label><input type="radio" name="investor-type" value="moderate"> Feel a bit nervous but hold on.</label>
+                    <label><input type="radio" name="investor-type" value="conservative"> Feel the urge to sell everything.</label>
+                    <button type="submit" class="btn-glow">See My Type</button>
+                </form>
+                <p id="quiz-result" class="quiz-result"></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Av_eSAFE Market. All Rights Reserved. For Educational Purposes Only.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculators - Av_eSAFE Market</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo">Av_eSAFE Market</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="calculators.html" class="nav-link active">Calculators</a></li>
+                <li class="nav-item"><a href="learning.html" class="nav-link">Learning Hub</a></li>
+                <li class="nav-item"><a href="extra-features.html" class="nav-link">Extra Tools</a></li>
+            </ul>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content page-title">
+        <h1>Financial Calculators</h1>
+        <div class="calculators-grid">
+
+            <!-- SIP Calculator -->
+            <div class="calculator-card">
+                <h3>SIP Calculator</h3>
+                <div class="form-group">
+                    <label for="sip-amount">Monthly Investment (₹)</label>
+                    <input type="number" id="sip-amount" value="5000" min="500" max="100000">
+                    <input type="range" id="sip-amount-slider" min="500" max="100000" step="500" value="5000">
+                </div>
+                <div class="form-group">
+                    <label for="sip-rate">Expected Return Rate (% p.a.)</label>
+                    <input type="number" id="sip-rate" value="12" min="1" max="30" step="0.1">
+                    <input type="range" id="sip-rate-slider" min="1" max="30" step="0.1" value="12">
+                </div>
+                <div class="form-group">
+                    <label for="sip-years">Time Period (Years)</label>
+                    <input type="number" id="sip-years" value="10" min="1" max="40">
+                    <input type="range" id="sip-years-slider" min="1" max="40" step="1" value="10">
+                </div>
+                <div class="calculator-results">
+                    <p>Invested Amount: <span id="sip-invested"></span></p>
+                    <p>Est. Returns: <span id="sip-returns"></span></p>
+                    <p>Total Value: <span id="sip-total"></span></p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="sipChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Lumpsum Calculator -->
+            <div class="calculator-card">
+                <h3>Lumpsum Calculator</h3>
+                <div class="form-group">
+                    <label for="lumpsum-amount">Total Investment (₹)</label>
+                    <input type="number" id="lumpsum-amount" value="100000" min="1000" max="10000000">
+                    <input type="range" id="lumpsum-amount-slider" min="1000" max="10000000" step="1000" value="100000">
+                </div>
+                <div class="form-group">
+                    <label for="lumpsum-rate">Expected Return Rate (% p.a.)</label>
+                    <input type="number" id="lumpsum-rate" value="12" min="1" max="30" step="0.1">
+                    <input type="range" id="lumpsum-rate-slider" min="1" max="30" step="0.1" value="12">
+                </div>
+                <div class="form-group">
+                    <label for="lumpsum-years">Time Period (Years)</label>
+                    <input type="number" id="lumpsum-years" value="10" min="1" max="40">
+                    <input type="range" id="lumpsum-years-slider" min="1" max="40" step="1" value="10">
+                </div>
+                <div class="calculator-results">
+                    <p>Invested Amount: <span id="lumpsum-invested"></span></p>
+                    <p>Est. Returns: <span id="lumpsum-returns"></span></p>
+                    <p>Total Value: <span id="lumpsum-total"></span></p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="lumpsumChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Loan EMI Calculator -->
+            <div class="calculator-card">
+                <h3>Loan EMI Calculator</h3>
+                <div class="form-group">
+                    <label for="loan-amount">Loan Amount (₹)</label>
+                    <input type="number" id="loan-amount" value="1000000" min="10000" max="20000000">
+                    <input type="range" id="loan-amount-slider" min="10000" max="20000000" step="10000" value="1000000">
+                </div>
+                <div class="form-group">
+                    <label for="loan-rate">Interest Rate (% p.a.)</label>
+                    <input type="number" id="loan-rate" value="8.5" min="5" max="20" step="0.1">
+                    <input type="range" id="loan-rate-slider" min="5" max="20" step="0.1" value="8.5">
+                </div>
+                <div class="form-group">
+                    <label for="loan-tenure">Loan Tenure (Years)</label>
+                    <input type="number" id="loan-tenure" value="20" min="1" max="30">
+                    <input type="range" id="loan-tenure-slider" min="1" max="30" step="1" value="20">
+                </div>
+                <div class="calculator-results">
+                    <p>Monthly EMI: <span id="loan-emi"></span></p>
+                    <p>Total Interest: <span id="loan-interest"></span></p>
+                    <p>Total Payment: <span id="loan-total"></span></p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="loanChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Profit & Loss Calculator -->
+            <div class="calculator-card">
+                <h3>Profit & Loss Calculator</h3>
+                <div class="form-group">
+                    <label for="buy-price">Buy Price (₹)</label>
+                    <input type="number" id="buy-price" value="100">
+                </div>
+                <div class="form-group">
+                    <label for="sell-price">Sell Price (₹)</label>
+                    <input type="number" id="sell-price" value="120">
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" value="50">
+                </div>
+                <div class="calculator-results">
+                    <p>Total Profit/Loss: <span id="pl-result"></span></p>
+                    <p>Profit/Loss %: <span id="pl-percent"></span></p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Av_eSAFE Market. All Rights Reserved. For Educational Purposes Only.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
