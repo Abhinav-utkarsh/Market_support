@@ -461,5 +461,25 @@ footer {
     .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
+    .navbar {
+        padding: 0 1rem; /* Reduce navbar padding on mobile */
+    }
+
+    .main-content {
+        padding: 1.5rem 1rem; /* Reduce main content padding */
+    }
+
+    .page-title h1 {
+        font-size: 2rem; /* Reduce page title font size */
+    }
+
+    .hero {
+        padding: 2rem 1rem; /* Reduce hero section padding */
+    }
+
     .hero h1 { font-size: 2.5rem; }
+
+    .features-grid, .calculators-grid, .articles-grid, .glossary-grid {
+        grid-template-columns: 1fr; /* Stack grid items in a single column */
+    }
 }
